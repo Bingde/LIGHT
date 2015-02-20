@@ -17,18 +17,10 @@
      bingsoft team
     </author>
 
-    <!--
-        If you do not want any permissions to be added to your app, add the
-        following tag to your config.xml; you will still have the INTERNET
-        permission on your app, which PhoneGap requires.
-    -->
     <preference name="permissions"                value="none"/>
-         <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 		 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
          <uses-permission android:name="android.permission.FLASHLIGHT" />
          <uses-permission android:name="android.permission.CAMERA" />
-		 
-		 
 		 
     <!--
         Define a specific version of PhoneGap to build into your app.
@@ -36,7 +28,7 @@
     -->
 
     <!-- Plugins -->
-    <gap:plugin name="nl.x-services.plugins.flashlight" version="2.0.0" />
+    <gap:plugin name="nl.x-services.plugins.flashlight" version="2.0.1" />
     <!-- Core plugins -->
    
 
