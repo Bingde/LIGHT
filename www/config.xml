@@ -28,7 +28,9 @@
     -->
 
     <!-- Plugins -->
+	<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io"/>
     <gap:plugin name="nl.x-services.plugins.flashlight" version="2.0.1" />
+	
     <!-- Core plugins -->
    
   <!--
