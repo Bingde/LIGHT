@@ -42,25 +42,25 @@
 
 </head> 
 <body onload="onLoad()"> 
+<p id="demo1"></p>
 <script>
    function onLoad() {
         var localtime=new Date();
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
             document.addEventListener('deviceready', initApp, false);
 			document.getElementById("demo1").innerHTML = localtime;
-				
-			
+
         } else {
             initApp();
         }
 		
    }
-		
+	
   var admobid = {};
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
-            banner: 'ca-app-pub-6869992474017983/9375997553', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-6869992474017983/1657046752'
+            banner: 'ca-app-pub-7973587087974413/2609977283', // or DFP format "/6253334/dfp_example_ad"
+            interstitial: 'ca-app-pub-7973587087974413/2821153288'
         };
     } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
         admobid = {
@@ -95,6 +95,12 @@
      AdMob.setOptions( defaultOptions );
      AdMob.createBanner( admobid.banner );
 };
+    function Showbig(){
+   AdMob.prepareInterstitial({
+    adId: admobid.interstitial,
+    autoShow: true
+});}
+
 </script>
 
 <div data-role="page" id="page">
@@ -121,8 +127,13 @@ function exitApp() {
 }
 </script>
 
-<button onclick="Show();">createsmall</button>
-	
+
+	button onclick="Show();">createsmall</button>
+<p> i love you yaya</p>
+
+<button onclick="Showbig();">createbig</button>
+
+<button onclick="Showbig();Show();">createboth</button
 </div>
 
 </body>
