@@ -12,7 +12,7 @@
 <style>
 
 .threedtext {
-    color: #FF1919;
+    color: #636E84;
     font-family: Arial, sans-serif;
     font-size: 48px;
     font-weight: bold;
@@ -24,18 +24,7 @@
           transition: all 0.3s ease-out;
 }
 
-.threedtext1 {
-    color: #FF1919;
-    font-family: Arial, sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    text-shadow: #afe222 1px 1px, #000 2px 2px, #000 3px 3px;
-    position: relative;
-    -moz-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-            -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
-}
+
 
 </style>
 
@@ -105,15 +94,15 @@
 
 <div data-role="page" id="page">
 <div data-role="header" >
-	<h1>LIGHT</h1> </div>
+	<h1>LED 灯</h1> </div>
 
 
-   <button  data-icon ="star" data-theme="c"  data-iconpos="top" onclick="window.plugins.flashlight.switchOn()"><span class="threedtext">On/开</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
+   <button  data-theme="c"  data-iconpos="top" onclick="window.plugins.flashlight.switchOn()"><span class="threedtext">On/开</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
    <p></p><p></p><p></p><p></p>
   
-   <button data-icon ="delete" data-theme="a" data-iconpos="top" onclick="window.plugins.flashlight.switchOff()"><span class="threedtext1">Off/关</span></button><p></P><p></p><p></p><p></p><p></p><p></p>
+   <button  data-theme="a" data-iconpos="top" onclick="window.plugins.flashlight.switchOff()"><span class="threedtext">Off/关</span></button><p></P><p></p><p></p><p></p><p></p><p></p>
 	<p></p><p></p><p></p><p></p>	
-   <button data-inline="true"  data-iconpos="right"onclick="window.plugins.flashlight.toggle()">Toggle/循环</button><p></p><p></p><p></p><p></p><p></p><p></p>
+   <button  data-iconpos="top" data-theme="d" onclick="window.plugins.flashlight.toggle()"><span class="threedtext">Toggle/开关</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
    
 <script>
 	 
