@@ -7,7 +7,7 @@
         id        = "com.libingweb.LIGHT"
         version   = "0.0.1">
 
-    <name>Light</name>
+    <name>手电筒</name>
 
     <description>
        we all need light in life.
