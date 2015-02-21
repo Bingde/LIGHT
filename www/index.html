@@ -46,11 +46,12 @@
 			  
 			     //window.plugins.flashlight.switchOn();
 				 
-			 
-                setTimeout(window.plugins.flashlight.switchOn(),2000);
+			 if(a%2==0)
+			{
+                setTimeout(window.plugins.flashlight.toggle(),2000);
 				
-			    setTimeout(window.plugins.flashlight.switchOff(),1000);
-	
+			  //  setTimeout(window.plugins.flashlight.switchOff(),1000);
+	        }
 			   
             x.addEventListener("click", myoff);
 			y.addEventListener("click", myoff);
