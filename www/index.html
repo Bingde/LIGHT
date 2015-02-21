@@ -37,21 +37,21 @@
 			var y= document.getElementById("off1");
             var a = 1;   
 			var b;       
-            function increase(){
-            document.getElementById("text").value=a;
-                a=a+1;
-            console.log(a); 
-			x.addEventListener("click", myoff);
+            function increase()
+			{
+              document.getElementById("text").value=a;
+              a=a+1;
+			  document.getElementById("text1").value=a;
+              console.log(a); 
+			  
+			 window.plugins.flashlight.switchOn();
+                //setTimeout(window.plugins.flashlight.switchOn(),1000);
+			    // setTimeout(window.plugins.flashlight.switchOff(),1000);
+	
+			   
+            x.addEventListener("click", myoff);
 			y.addEventListener("click", myoff);
 			
-	        while(a % 2 ==0)
-					{
-               setTimeout(window.plugins.flashlight.switchOn(),1000);
-			   setTimeout(window.plugins.flashlight.switchOff(),1000);
-			   document.getElementById("text1").value=a;
-               
-				  }
-
 			}
 		
 			function myoff(){
