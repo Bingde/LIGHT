@@ -44,9 +44,12 @@
 			  document.getElementById("text1").value=a;
               console.log(a); 
 			  
-			 window.plugins.flashlight.switchOn();
-                //setTimeout(window.plugins.flashlight.switchOn(),1000);
-			    // setTimeout(window.plugins.flashlight.switchOff(),1000);
+			     //window.plugins.flashlight.switchOn();
+				 
+			 
+                setTimeout(window.plugins.flashlight.switchOn(),2000);
+				
+			    setTimeout(window.plugins.flashlight.switchOff(),1000);
 	
 			   
             x.addEventListener("click", myoff);
