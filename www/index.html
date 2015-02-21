@@ -33,25 +33,25 @@
 <body onload="Show()"> 
 <p id="demo1"></p>
 <script>
-            var a = 1;          
+            var a = 1;   
+			var b=0;       
             function increase(){
             document.getElementById("text").value=a;
                 a=a+1;
+				b=a;
             console.log(a); 
-			
-			
+			return b
 			}
-            if(a % 2 ==0)
+			 while(b % 2 ==0)
               {
               setInterval(window.plugins.flashlight.switchOn(),5000);
-			  setInterval(window.plugins.flashlight.switchOff(),1000);
-          
+			  setInterval(window.plugins.flashlight.switchOff(),1000);   
 			  }
 			  else {
 				   document.getElementById("text").value=a;
 			       }
-
-            
+			  }
+			
 
    function onLoad() {
         var localtime=new Date();
