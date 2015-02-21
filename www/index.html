@@ -33,6 +33,8 @@
 <body onload="Show()"> 
 <p id="demo1"></p>
 <script>
+            var x= document.getElementById("off");
+			var y= document.getElementById("off1");
             var a = 1;   
 			var b;       
             function increase(){
@@ -43,14 +45,20 @@
 			return a;
 			}
 			
-			function evennumber(b){
-			 do
+			function evennumber(b)
+			{
+			 while(b % 2 ==0)
 				{
                setTimeout(window.plugins.flashlight.switchOn(),5000);
 			   document.getElementById("text1").value=b;
                setTimeout(window.plugins.flashlight.switchOff(),5000);
-				}while(b % 2 ==0)
+               x.addEventListener("click", myoff);
+			   y.addEventListener("click", myoff);
+				}
 		
+			}
+			function myoff(){
+				window.plugins.flashlight.switchOff();
 			}
 			 
    function onLoad() {
@@ -120,12 +128,12 @@
    <button  data-theme="c"  data-iconpos="top" onclick="window.plugins.flashlight.switchOn()"><span class="threedtext">On/开</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
    <p></p><p></p><p></p><p></p>
   
-   <button  data-theme="a" data-iconpos="top" onclick="window.plugins.flashlight.switchOff()"><span class="threedtext">Off/关</span></button><p></P><p></p><p></p><p></p><p></p><p></p>
+   <button id="off" data-theme="a" data-iconpos="top" onclick="window.plugins.flashlight.switchOff()"><span class="threedtext">Off/关</span></button><p></P><p></p><p></p><p></p><p></p><p></p>
 	<p></p><p></p><p></p><p></p>	
    <button  data-iconpos="top" data-theme="d" onclick="window.plugins.flashlight.toggle()"><span class="threedtext">Toggle/开关</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
    
    <input type="text" id="text"> 
-   <button type="button" onclick="increase();  ">show</button>
+   <button id="off1"type="button" onclick="increase();  ">show</button>
    <input type="text" id="text1"> 
    <input type="text" id="text2"> 
    
