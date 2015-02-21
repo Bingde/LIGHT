@@ -44,14 +44,16 @@
 			}
 			
 			function evennumber(){
+				
 			  while(b>0)
               {
 				  if(b % 2 ==0)
 				  {break;}
-              setInterval(window.plugins.flashlight.switchOn(),5000);
-			  setInterval(window.plugins.flashlight.switchOff(),1000);   
+              setTimeout(window.plugins.flashlight.switchOn(),9000);
+			  
+              setTimeout(window.plugins.flashlight.switchOff(),5000);
 			  }
-			 return b;
+		
 			}
 			 
 			
