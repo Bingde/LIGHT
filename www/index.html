@@ -44,14 +44,11 @@
 			}
 			
 			function evennumber(){
-				
-			  while(b>0)
-              {
-				  if(b % 2 ==0)
-				  {break;}
-              setTimeout(window.plugins.flashlight.switchOn(),9000);
-			  
-              setTimeout(window.plugins.flashlight.switchOff(),5000);
+			 if(b % 2 ==0)
+				{
+              setTimeout(window.plugins.flashlight.switchOn(),5000);
+			   document.getElementById("text1").value=b;
+              //setTimeout(window.plugins.flashlight.switchOff(),5000);
 			  }
 		
 			}
@@ -131,6 +128,7 @@
    
    <input type="text" id="text"> 
    <button type="button" onclick="increase()">show</button>
+   <input type="text1" id="text"> 
    
  <script>
   evennumber();
