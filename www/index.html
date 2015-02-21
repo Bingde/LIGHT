@@ -1,18 +1,19 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>LIGHT</title>
-<link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
-<script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
-<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
-
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="AdMob.js"></script>
-<style>
-
+    <head>
+        <meta charset="utf-8">
+            <title>LIGHT</title>
+            <link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+            <script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+            <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="AdMob.js"></script>
+            <style>
+            
+ 
 .threedtext {
     color: #636E84;
+    //color:#751975;
     font-family: Arial, sans-serif;
     font-size: 48px;
     font-weight: bold;
@@ -25,14 +26,24 @@
 }
 
 
+  #header {
+    min-height:20px;
+    background:white;
+}
+
+ .threedtext:hover {
+    color: #FFF;
+text-shadow: #afe222 1px 1px, #afe222 2px 2px, #afe222 3px 3px, #B7BDC8 4px 4px,
+#B7BDC8 5px 5px, #B7BDC8 6px 6px;
+    left: -6px;
+    top: -6px;
+}
 
 </style>
-
-
-</head> 
-<body onload="Show()"> 
-<p id="demo1"></p>
-<script>
+        </head>
+        <body id="big" onload="Show()">
+            <p id="demo1"></p>
+            <script>
             var x= document.getElementById("off");
 			var y= document.getElementById("off1");
             var a = 1;   
@@ -120,33 +131,184 @@
 });}
 
 </script>
+            <div data-role="page" id="page">
+                <div id ="header" data-role="header">
+                    <h1 style="font-size:25px;color:red" class="threedtext">LED 灯</h1>
+                </div>
+                <button class ="cool" data-inline ="true" data-mini ="true" >字体染色</button>
+                <button data-inline ="true" data-mini ="true" onclick="myFunction5()">默认</button>
+                <button data-inline ="true" data-mini ="true" onclick="myFunction()">绿</button>
+                <button data-inline ="true" data-mini ="true" onclick="myFunction1()">黄</button>
+                <button data-inline ="true" data-mini ="true" onclick="myFunction2()">红</button>
+                <button data-inline ="true" data-mini ="true" onclick="myFunction3()">蓝</button>
+                <button data-inline ="true" data-mini ="true" onclick="myFunction4()">橙</button>
+                <br>
+                    <button data-inline ="true" data-mini ="true">背景染色</button>
+                    <button data-inline ="true" data-mini ="true" onclick="bgc()">默认</button>
+                    <button data-inline ="true" data-mini ="true" onclick="bgc1()">黑</button>
+                    <button data-inline ="true" data-mini ="true" onclick="bgc2()">深蓝</button>
+                    <button data-inline ="true" data-mini ="true" onclick="bgc3()">紫</button>
+                    <button data-inline ="true" data-mini ="true" onclick="bgc4()">浅</button>
+                    <script>
 
-<div data-role="page" id="page">
-<div data-role="header" >
-	<h1>LED 灯</h1> </div>
+function bgc4() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.backgroundColor = "#8282A3";
+    }
+}
 
 
-   <button  data-theme="c"  data-iconpos="top" onclick="window.plugins.flashlight.switchOn()"><span class="threedtext">On/开</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
-   <p></p><p></p><p></p><p></p>
-  
-   <button id="off" data-theme="a" data-iconpos="top" onclick="window.plugins.flashlight.switchOff()"><span class="threedtext">Off/关</span></button><p></P><p></p><p></p><p></p><p></p><p></p>
-	<p></p><p></p><p></p><p></p>	
-   <button  data-iconpos="top" data-theme="d" onclick="window.plugins.flashlight.toggle()"><span class="threedtext">Toggle/开关</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
-   
-   <input type="text" id="text"> 
-   <button id="off1"type="button" onclick="increase()">show</button>
-   <input type="text" id="text1"> 
-   <input type="text" id="text2"> 
-   
-   <script>
+function bgc3() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.backgroundColor = "#8F00B2";
+    }
+}
+
+
+function bgc() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.backgroundColor = "#FBFBFB";
+    }
+}
+
+
+function bgc1() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.backgroundColor = "#000000";
+    }
+}
+function bgc2() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.backgroundColor = "#474719";
+    }
+}
+
+
+function myFunction5() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.color = "#636E84";
+    }
+}
+
+                    
+                    </script>
+                    <script>
+
+function myFunction4() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.color = "#FF66CC";
+    }
+}
+
+                    
+                    </script>
+                    <script>
+
+function myFunction3() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.color = "#000099";
+    }
+}
+
+                    
+                    </script>
+                    <script>
+
+function myFunction2() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.color = "#FF1919";
+    }
+}
+
+                    
+                    </script>
+                    <script>
+function myFunction1() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.color = "#FF9900";
+    }
+}
+
+                    
+                    </script>
+                    <script>
+function myFunction() {
+    var myNodelist = document.getElementsByTagName("span");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        myNodelist[i].style.color = "green";
+    }
+}
+
+                    
+                    </script>
+                    <button class="cool" data-theme="c"  data-iconpos="top" onclick="window.plugins.flashlight.switchOn()">
+                        <span class="threedtext">On/开</span>
+                    </button>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <button id="off" data-theme="a" data-iconpos="top" onclick="window.plugins.flashlight.switchOff()">
+                        <span class="threedtext">Off/关</span>
+                    </button>
+                    <p>
+                    </P>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <button class="cool" data-iconpos="top" data-theme="d" onclick="window.plugins.flashlight.toggle()">
+                        <span class="threedtext">Toggle/开关</span>
+                    </button>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <input type="text" id="text">
+                        <button id="off1"type="button" onclick="increase()">show</button>
+                        <input type="text" id="text1">
+                            <input type="text" id="text2">
+                                <script>
    
     document.getElementById("text2").value=b;
    
    evennumber(b);
    </script>
-
-   
-<script>
+                                <script>
 	 
 	 document.addEventListener("backbutton", function() {
   // pass exitApp as callbacks to the switchOff method
@@ -157,10 +319,6 @@ function exitApp() {
   navigator.app.exitApp();
 }
 </script>
-
-
-
-</div>
-
-</body>
-</html>
+                            </div>
+                        </body>
+                    </html>
