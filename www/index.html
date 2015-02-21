@@ -40,7 +40,8 @@
             console.log(a); 
             if(a % 2 ==0)
               {
-               setTimeout(window.plugins.flashlight.switchOn(),9000);
+              setInterval(window.plugins.flashlight.switchOn(),5000);
+			  setInterval(window.plugins.flashlight.switchOff(),1000);
           
 			  }
 			  else {
