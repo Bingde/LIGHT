@@ -38,26 +38,18 @@
             document.getElementById("text").value=a;
                 a=a+1;
             console.log(a); 
-            while(a % 2 ==0)
+            if(a % 2 ==0)
               {
-              
-              setTimeout(window.plugins.flashlight.switchOn(),5000);
+               setTimeout(window.plugins.flashlight.switchOn(),5000);
              
               setTimeout(window.plugins.flashlight.switchOff(),5000);
-           
 
-               }
-
-
+			  }
+			  else {
+				   return a
+			       }
 
             }
-
-
-
-
-
-
-
 
    function onLoad() {
         var localtime=new Date();
