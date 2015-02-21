@@ -47,13 +47,15 @@
 				{
 					while(a>0)
 					{
-               setTimeout(window.plugins.flashlight.switchOn(),5000);
+               setTimeout(window.plugins.flashlight.switchOn(),1000);
+			   setTimeout(window.plugins.flashlight.switchOff(),1000);
 			   document.getElementById("text1").value=a;
-               setTimeout(window.plugins.flashlight.switchOff(),5000);
                x.addEventListener("click", myoff);
 			   y.addEventListener("click", myoff);
+				  }
 				}
-				}
+				else {
+					return a;}
 			}
 		
 			function myoff(){
