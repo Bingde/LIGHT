@@ -34,23 +34,23 @@
 <p id="demo1"></p>
 <script>
             var a = 1;   
-			var b=0;       
+			var b;       
             function increase(){
             document.getElementById("text").value=a;
                 a=a+1;
 				b=a;
             console.log(a); 
-			return b;
+			return a;
 			}
 			
-			function evennumber(){
+			function evennumber(b){
 			 if(b % 2 ==0)
 				{
-              setTimeout(window.plugins.flashlight.switchOn(),5000);
+               setTimeout(window.plugins.flashlight.switchOn(),5000);
 			   document.getElementById("text1").value=b;
               //setTimeout(window.plugins.flashlight.switchOff(),5000);
 			  }
-		
+		     else{ break;}
 			}
 			 
 			
@@ -131,10 +131,6 @@
    <input type="text1" id="text"> 
    
 
-   
-   
-  
-  
    
 <script>
 	 
