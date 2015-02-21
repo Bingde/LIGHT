@@ -40,17 +40,10 @@
                 a=a+1;
 				b=a;
             console.log(a); 
-			return b
+			return b;
 			}
-			 while(b % 2 ==0)
-              {
-              setInterval(window.plugins.flashlight.switchOn(),5000);
-			  setInterval(window.plugins.flashlight.switchOff(),1000);   
-			  }
-			  else {
-				   document.getElementById("text").value=a;
-			       }
-			  }
+			
+			 
 			
 
    function onLoad() {
@@ -126,6 +119,20 @@
    
    <input type="text" id="text"> 
    <button type="button" onclick="increase()">show</button>
+   
+ <script>
+   
+   
+    while(b % 2 ==0)
+              {
+              setInterval(window.plugins.flashlight.switchOn(),5000);
+			  setInterval(window.plugins.flashlight.switchOff(),1000);   
+			  }
+			  else {
+				   document.getElementById("text").value=a;
+			       }
+   
+   </script>
    
 <script>
 	 
