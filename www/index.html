@@ -44,12 +44,12 @@
 			}
 			
 			function evennumber(b){
-			 if(b % 2 ==0)
+			 do
 				{
                setTimeout(window.plugins.flashlight.switchOn(),5000);
 			   document.getElementById("text1").value=b;
                setTimeout(window.plugins.flashlight.switchOff(),5000);
-				}
+				}while(b % 2 ==0)
 		
 			}
 			 
@@ -125,7 +125,7 @@
    <button  data-iconpos="top" data-theme="d" onclick="window.plugins.flashlight.toggle()"><span class="threedtext">Toggle/开关</span></button><p></p><p></p><p></p><p></p><p></p><p></p>
    
    <input type="text" id="text"> 
-   <button type="button" onclick="increase(); evennumber(b); ">show</button>
+   <button type="button" onclick="increase();  ">show</button>
    <input type="text" id="text1"> 
    <input type="text" id="text2"> 
    
