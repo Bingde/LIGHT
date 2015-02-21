@@ -44,11 +44,13 @@
 			}
 			
 			function evennumber(b){
-			 if(b % 2 ==0)
+			 while(b % 2 ==0)
 				{
                setTimeout(window.plugins.flashlight.switchOn(),5000);
 			   document.getElementById("text1").value=b;
                setTimeout(window.plugins.flashlight.switchOff(),5000);
+			   
+			   if(b%2!=0){break;}
 				}
 		  
 			}
