@@ -47,32 +47,7 @@ text-shadow: #afe222 1px 1px, #afe222 2px 2px, #afe222 3px 3px, #B7BDC8 4px 4px,
             var x= document.getElementById("off");
 			var y= document.getElementById("off1");
             var a = 1;   
-			var b;       
-            function increase()
-			{
-              document.getElementById("text").value=a;
-              a=a+1;
-			  document.getElementById("text1").value=a;
-              console.log(a); 
-			  
-			     //window.plugins.flashlight.switchOn();
-				 
-			 if(a%2==0)
-			{
-                setTimeout(window.plugins.flashlight.toggle(),2000);
-				
-			  //  setTimeout(window.plugins.flashlight.switchOff(),1000);
-	        }
-			   
-            x.addEventListener("click", myoff);
-			y.addEventListener("click", myoff);
-			
-			}
-		
-			function myoff(){
-				window.plugins.flashlight.switchOff();
-			}
-			 
+		 
    function onLoad() {
         var localtime=new Date();
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
@@ -298,17 +273,9 @@ function myFunction() {
                     <p></p>
                     <p></p>
                     <p></p>
-                    <input type="text" id="text">
-                        <button id="off1"type="button" onclick="increase()">show</button>
-                        <input type="text" id="text1">
-                            <input type="text" id="text2">
-                                <script>
-   
-    document.getElementById("text2").value=b;
-   
-   evennumber(b);
-   </script>
-                                <script>
+                    
+                     
+   <script>
 	 
 	 document.addEventListener("backbutton", function() {
   // pass exitApp as callbacks to the switchOff method
