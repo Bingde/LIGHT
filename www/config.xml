@@ -10,7 +10,7 @@
     <name>手电筒</name>
 
     <description>
-       we all need light in life.
+       每个人都需要有手电筒。
     </description>
 
     <author href="http://libingweb.com" email="bingsoft@faithzone.ca">
@@ -32,7 +32,11 @@
     <gap:plugin name="nl.x-services.plugins.flashlight" version="2.0.1" />
 	
     <!-- Core plugins -->
-   
+    <icon src="icon.png" />
+    <icon src="ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
   <!--
         Define access to external domains.
 
